@@ -1,0 +1,804 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+{% load static %}
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ZeeTech - Home</title>
+    <meta name="author" content="Vecuro">
+    <meta name="description" content="ZeeTech - Home">
+    <meta name="keywords"
+        content="academic, artist, center, club, coach, college, drive, driving, education, entertainment, gambling, golf, jackpot, knowledge, money, multipurpose, music, song, student">
+    <meta name="robots" content="INDEX,FOLLOW">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel="shortcut icon" href="{% static 'assets/img/logo.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'assets/img/logo.png' %}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/app.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'assets/css/fontawesome.min.css' %}"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="loader"></div>
+        </div>
+    </div>
+    <div class="vs-menu-wrapper">
+        <div class="vs-menu-area text-center"><button class="vs-menu-toggle"><i class="fa-solid fa-times"></i></button>
+            <div class="mobile-logo"><a href="/"><img src="{% static 'assets/img/logo.png' %}" alt=""></a></div>
+            <div class="">
+                <ul style="list-style-type: none;">
+                    <li class=""><a href="#home">Home</a>
+                    </li>
+                    <li><a href="#about">About Us</a>
+                    </li>
+                    <li class=""><a href="#courses">Courses</a>
+                    </li>
+                    <li class=""><a href="#blogs">Blogs</a>
+
+                    </li>
+                    <li><a href="#home">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="popup-search-box d-none d-lg-block"><button class="searchClose"><i class="fa-solid fa-times"></i></button>
+        <form action="#"><input type="text" class="border-theme" placeholder="What are you looking for"> <button
+                type="submit"><i class="fa-solid fa-search"></i></button></form>
+    </div>
+    <header class="vs-header header-layout3">
+        <div class="sticky-wrapper">
+            <div class="sticky-active">
+                <div class="container position-relative z-index-common">
+                    <div class="row align-items-center justify-content-between gx-50">
+                        <div class="col">
+                            <div class="vs-logo"><a href="index.html"><img src="{% static 'assets/img/logo.png' %}"
+                                        alt="logo"></a></div>
+                        </div>
+                        <div class="col-auto">
+                            <nav class="main-menu menu-style1 d-none d-lg-block">
+                                <ul>
+                                    <li class=""><a href="#home">Home</a>
+                                    </li>
+                                    <li><a href="#about">About Us</a></li>
+                                    <li class=""><a href="#courses">Courses</a>
+                                    </li>
+                                    <li class=""><a href="#blogs">Blogs</a>
+
+                                    </li>
+                                    <li><a href="#home">Contact Us</a></li>
+                                </ul>
+                            </nav><button class="vs-menu-toggle d-inline-block d-lg-none"><i
+                                    class="fa-solid fa-bars"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="hero-layout2" id="hero">
+        <div class="shape-mockup jump-img d-none d-xxxl-block" data-left="-260px" data-top="340px">
+            <div class="vs-border-circle"></div>
+        </div>
+        <div class="shape-mockup jump-reverse d-none d-xxxl-block" data-right="9%" data-bottom="30%">
+            <div class="shape-dotted"></div>
+        </div>
+        <div class="shape-mockup rotate d-none d-xxxl-block" data-left="49%" data-top="40%">
+            <div class="vs-polygon1"></div>
+        </div>
+        <div class="shape-mockup jump d-none d-xxxl-block" data-left="46%" data-top="40%">
+            <div class="vs-rounded1"></div>
+        </div>
+        <div class="container">
+            <div class="row gx-50">
+                <div class="col-lg-6 col-xl-5">
+                    <div class="hero-content">
+                        <h1 class="hero-title">We Develop Developers.</h1>
+                        <p class="hero-text">Learn Online Or Offline And Connect With Us Globally</p>
+                        <form action="{% url 'contactus' %}" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group"><input type="text" name="full_name" id="name" placeholder="Full Name">
+                            </div>
+                            <div class="form-group"><input type="text" name="email" id="email"
+                                    placeholder="Email Address"></div>
+                            <div class="form-group"><input type="text" name="phone" id="phone" placeholder="Phone No">
+                            </div>
+                            <div class="form-btn"><button type="submit" class="vs-btn">Apply Today</button></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xl-7 wow fadeInUp align-self-end" data-wow-delay="0.4s">
+                    <div class="picture-box4">
+                        <div class="img-1"><img src="{% static 'assets/img/about/about-3-2.png' %}" alt="girl"></div>
+                        <div class="vs-circle"></div>
+                        <div class="media-style7">
+                            <h3 class="media-title">Job Oriented</h3>
+                            <p class="media-text">50+</p><button type="button" class="vs-btn">Click Me!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="space-top space-extra-bottom">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-9 col-lg-8 col-xl-7 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="title-area">
+                        <div class="sec-icon">
+                            <div class="vs-circle"></div>
+                        </div><span class="sec-subtitle">SELECT YOUR CATEGORY</span>
+                        <h2 class="sec-title h1">Whatever Your Industry Learn Skills You Need</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row vs-carousel" data-slide-show="6" data-ml-slide-show="6" data-lg-slide-show="4"
+                data-md-slide-show="3" data-sm-slide-show="2" data-xs-slide-show="2">
+                <div class="col-xl-2">
+                    <div class="category-style2">
+                        <div class="category-icon">
+                            <div class="vs-circle"></div><img src="{% static 'assets/img/icon/feature-icon-3-6.svg' %}"
+                                alt="category Icon">
+                        </div>
+                        <h4 class="category-title h6"><a href="course.html" class="text-inherit">Cloud</a></h4>
+
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="category-style2">
+                        <div class="category-icon"><img src="{% static 'assets/img/icon/feature-icon-3-4.svg' %}"
+                                alt="Feature Icon">
+                            <div class="vs-circle"></div>
+                        </div>
+                        <h4 class="category-title h6"><a href="course.html" class="text-inherit">Digital Marketing</a>
+                        </h4>
+
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="category-style2">
+                        <div class="category-icon"><img src="{% static 'assets/img/icon/feature-icon-3-6.svg' %}"
+                                alt="Feature Icon">
+                            <div class="vs-circle"></div>
+                        </div>
+                        <h4 class="category-title h6"><a href="course.html" class="text-inherit">Development</a></h4>
+
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="category-style2">
+                        <div class="category-icon"><img src="{% static 'assets/img/icon/feature-icon-3-7.svg' %}"
+                                alt="Feature Icon">
+                            <div class="vs-circle"></div>
+                        </div>
+                        <h4 class="category-title h6"><a href="course.html" class="text-inherit">Technology</a></h4>
+
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="category-style2">
+                        <div class="category-icon"><img src="{% static 'assets/img/icon/feature-icon-3-8.svg' %}"
+                                alt="Feature Icon">
+                            <div class="vs-circle"></div>
+                        </div>
+                        <h4 class="category-title h6"><a href="course.html" class="text-inherit">Tech & Coding</a></h4>
+
+                    </div>
+                </div>
+                <div class="col-xl-2">
+                    <div class="category-style2">
+                        <div class="category-icon"><img src="{% static 'assets/img/icon/feature-icon-3-7.svg' %}"
+                                alt="Feature Icon">
+                            <div class="vs-circle"></div>
+                        </div>
+                        <h4 class="category-title h6"><a href="course.html" class="text-inherit">Data Science</a></h4>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="space-bottom">
+        <div class="container">
+            <div class="row gx-70 justify-content-center" id="about">
+                <div class="col-md-6 mb-40 mb-md-0">
+                    <div class="picture-box3">
+                        <div class="img-1 mega-hover"><img src="{% static 'assets/img/about/about-3-1.jpg' %}"
+                                alt="About Img">
+                            <div class="shape-dotted jump"></div>
+                        </div>
+                        <div class="picture-content">
+                            <div class="media-box1">
+                                <h5 class="media-title">10+ Courses</h5>
+                                <p class="media-text">Our unique training, based on practical activity</p>
+                            </div>
+                            <div class="media-box1 active">
+                                <h5 class="media-title">8 Years</h5>
+                                <p class="media-text">Our heritage and longevity as the leading</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-5 align-self-center">
+                    <div class="title-area mb-3 mb-lg-4"><span class="sec-subtitle">WELCOME TO GLOBAL EDUCATION</span>
+                        <h2 class="h1">Learn Online Through Any Country</h2>
+                    </div>
+                    <div class=" vs-list mb-2 mb-lg-4 pb-1">
+                        <ul>
+                            <li>Steady stream of new students</li>
+                            <li>Smart calendar</li>
+                            <li>Interactive classroom</li>
+                            <li>Convenient payment methods</li>
+                            <li>Professional development webinars</li>
+                        </ul>
+                        <!-- </div><a href="login-register.html" class="vs-btn style3"><i class="fa-solid fa-angle-right"></i>Sign Up to Teach</a></div> -->
+                    </div>
+                </div>
+    </section>
+    <section class="space-top space-extra-bottom" data-bg-src="{% static 'assets/img/bg/course-bg-pattern.jpg' %}">
+        <div class="container">
+            <div class="title-area text-center">
+                <div class="sec-icon">
+                    <div class="vs-circle"></div>
+                </div><span class="sec-subtitle">IDEAL TUTOR FOR EVERYONE</span>
+                <h2 class="sec-title h1">All Qualified Tutors</h2>
+            </div>
+            <!-- <div class="row vs-carousel" data-slide-show="4" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="2" data-center-mode="true">
+                <div class="col-sm-6 col-xl-3">
+                    <div class="team-style2">
+                        <div class="team-content">
+                            <h4 class="team-name h5"><a href="team-details.html">Moniqa Romin</a></h4>
+                            <p class="team-degi">Maths & Physics Tutor</p><span class="team-courses">100+ Lessons Completed</span>
+                            <div class="team-img"><img src="{% static 'assets/img/team/team-s-3-1.png' %}" alt="member"></div><span class="team-rate"><span class="team-price">$63 </span>/ per hour</span>
+                            <p class="team-experi">2+ years experience</p>
+                            <div class="team-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="team-style2">
+                        <div class="team-content">
+                            <h4 class="team-name h5"><a href="team-details.html">Marry Chain</a></h4>
+                            <p class="team-degi">Economics Professor</p><span class="team-courses">633+ Lessons Completed</span>
+                            <div class="team-img"><img src="{% static 'assets/img/team/team-s-3-2.png' %}" alt="member"></div><span class="team-rate"><span class="team-price">$45 </span>/ per hour</span>
+                            <p class="team-experi">8+ years experience</p>
+                            <div class="team-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="team-style2">
+                        <div class="team-content">
+                            <h4 class="team-name h5"><a href="team-details.html">Alice Heard</a></h4>
+                            <p class="team-degi">Statistics Professor</p><span class="team-courses">755+ Lessons Completed</span>
+                            <div class="team-img"><img src="{% static 'assets/img/team/team-s-3-3.png' %}" alt="member"></div><span class="team-rate"><span class="team-price">$99 </span>/ per hour</span>
+                            <p class="team-experi">7+ years experience</p>
+                            <div class="team-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="team-style2">
+                        <div class="team-content">
+                            <h4 class="team-name h5"><a href="team-details.html">Jenny White</a></h4>
+                            <p class="team-degi">Art Professor</p><span class="team-courses">336+ Lessons Completed</span>
+                            <div class="team-img"><img src="{% static 'assets/img/team/team-s-3-4.png' %}" alt="member"></div><span class="team-rate"><span class="team-price">$26 </span>/ per hour</span>
+                            <p class="team-experi">8+ years experience</p>
+                            <div class="team-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="team-style2">
+                        <div class="team-content">
+                            <h4 class="team-name h5"><a href="team-details.html">William Smith</a></h4>
+                            <p class="team-degi">Science Professor</p><span class="team-courses">220+ Lessons Completed</span>
+                            <div class="team-img"><img src="{% static 'assets/img/team/team-s-3-5.png' %}" alt="member"></div><span class="team-rate"><span class="team-price">$22 </span>/ per hour</span>
+                            <p class="team-experi">6+ years experience</p>
+                            <div class="team-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="team-style2">
+                        <div class="team-content">
+                            <h4 class="team-name h5"><a href="team-details.html">George Hobbs</a></h4>
+                            <p class="team-degi">Maths & Physics Tutor</p><span class="team-courses">778+ Lessons Completed</span>
+                            <div class="team-img"><img src="{% static 'assets/img/team/team-s-3-6.png' %}" alt="member"></div><span class="team-rate"><span class="team-price">$18 </span>/ per hour</span>
+                            <p class="team-experi">7+ years experience</p>
+                            <div class="team-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+    <section class="space-bottom">
+        <div class="container container-style1">
+            <div class="row gx-0 justify-content-center justify-content-lg-end">
+                <div class="col-md-6 col-lg-4 col-xxl-auto">
+                    <div class="feature-style2">
+                        <div class="feature-img"><img src="{% static 'assets/img/about/feature-img-3-1.jpg' %}" alt="">
+                        </div>
+                        <div class="feature-content"><span class="feature-icon"><img
+                                    src="{% static 'assets/img/icon/feature-icon-3-1.svg' %}" alt=""></span>
+                            <h5 class="feature-title"><a href="about.html">Teaching Material</a></h5>
+                            <p class="feature-text fs-md">Millions of people have used Kingster to decide which online
+                                course to take.</p><a href="about.html" class="feature-link">Learn More <i
+                                    class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xxl-auto">
+                    <div class="feature-style2">
+                        <div class="feature-img"><img src="{% static 'assets/img/about/feature-img-3-2.jpg' %}" alt="">
+                        </div>
+                        <div class="feature-content"><span class="feature-icon"><img
+                                    src="{% static 'assets/img/icon/feature-icon-3-2.svg' %}" alt=""></span>
+                            <h5 class="feature-title"><a href="course.html">Online Courses</a></h5>
+                            <p class="feature-text fs-md">Millions of people have used Kingster to decide which online
+                                course to take.</p><a href="about.html" class="feature-link">Learn More <i
+                                    class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xxl-auto">
+                    <div class="feature-style2">
+                        <div class="feature-img"><img src="{% static 'assets/img/about/feature-img-3-3.jpg' %}" alt="">
+                        </div>
+                        <div class="feature-content"><span class="feature-icon"><img
+                                    src="{% static 'assets/img/icon/feature-icon-3-3.svg' %}" alt=""></span>
+                            <h5 class="feature-title"><a href="academic-program.html">Academic Programs</a></h5>
+                            <p class="feature-text fs-md">Millions of people have used Kingster to decide which online
+                                course to take.</p><a href="about.html" class="feature-link">Learn More <i
+                                    class="fas fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="picture-box4"><img src="{% static 'assets/img/about/feature-img-3-4.jpg' %}" alt="thumb"
+                            class="d-none d-xxxl-block"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="space-bottom" id="courses">
+        <div class="container">
+            <div class="title-area text-center">
+                <div class="sec-icon">
+                    <div class="vs-circle"></div>
+                </div><span class="sec-subtitle">WELCOME TO GLOBAL EDUCATION</span>
+                <h2 class="sec-title h1">Popular Courses</h2>
+            </div>
+            <div class="vs-carousel row slide-course-big" data-fade="true" data-asnavfor=".slide-course-thumb"
+                data-slide-show="1" data-lg-slide-show="2" data-md-slide-show="2">
+                <div class="col-md-6 col-xl-12">
+                    <div class="course-style4">
+                        <div class="course-img"><a href="course-details.html"><img class="w-100"
+                                    src="{% static 'assets/img/course/course-3-1.jpg' %}" alt="Course Img"></a></div>
+                        <div class="course-content">
+                            <div class="course-category"><a href="course.html">Data Science</a></div>
+                            <h3 class="course-name"><a href="course-details.html">Advance Begineer's Goal & Managing
+                                    Quality Course</a></h3>
+                            <div class="course-meta"><a href="course.html"><i class="fas fa-user-tie"></i><span
+                                        class="total-student">204 Students</span></a> <a href="course.html"><i
+                                        class="fa-solid fa-tv"></i><span class="course-hour">12 Leson</span></a> <a
+                                    href="course.html"><i class="fa-solid fa-clock"></i><span class="course-hour">2h
+                                        11m</span></a></div>
+                            <div class="course-price"><span class="price"><del>1 Lakh</del> 40K </span> <small
+                                    class="discount">50% Off</small></div>
+                            <div class="course-bottom">
+                                <div class="course-author"><a href="team-details.html" class="text-inherit"><img
+                                            src="{% static 'assets/img/about/author-3-6.png' %}" alt="About Author">By
+                                        Zeeshan Malim</a></div>
+                                <div class="course-review"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                                        class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <span class="review-avarage">( 5.0 )</span>
+                                </div>
+                            </div><a href="https://instagram.com/zeetech_academy" class="vs-btn style5"><i
+                                    class="fas fa-play"></i>Preview Course</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-12">
+                    <div class="course-style4">
+                        <div class="course-img"><a href="course-details.html"><img class="w-100"
+                                    src="{% static 'assets/img/course/course-3-2.jpg' %}" alt="Course Img"></a></div>
+                        <div class="course-content">
+                            <div class="course-category"><a href="course.html">frontEnd</a></div>
+                            <h3 class="course-name"><a href="course-details.html">Advance Technology & Architecture
+                                    Course Enroll</a></h3>
+                            <div class="course-meta"><a href="course.html"><i class="fas fa-user-tie"></i><span
+                                        class="total-student">963 Students</span></a> <a href="course.html"><i
+                                        class="fa-solid fa-tv"></i><span class="course-hour">28 Leson</span></a> <a
+                                    href="course.html"><i class="fa-solid fa-clock"></i><span class="course-hour">6h
+                                        45m</span></a></div>
+                            <div class="course-price"><span class="price"><del>60K</del> 15K</span> <small
+                                    class="discount">60% Off</small></div>
+                            <div class="course-bottom">
+                                <div class="course-author"><a href="team-details.html" class="text-inherit"><img
+                                            src="{% static 'assets/img/about/author-3-6.png' %}" alt="About Author">By
+                                        Zeeshan Malim</a></div>
+                                <div class="course-review"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                                        class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <span class="review-avarage">( 5.0 )</span>
+                                </div>
+                            </div><a href="https://instagram.com/zeetech_academy" class="vs-btn style5"><i
+                                    class="fas fa-play"></i>Preview Course</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-12">
+                    <div class="course-style4">
+                        <div class="course-img"><a href="course-details.html"><img class="w-100"
+                                    src="{% static 'assets/img/course/course-3-3.jpg' %}" alt="Course Img"></a></div>
+                        <div class="course-content">
+                            <div class="course-category"><a href="course.html">Python Django</a></div>
+                            <h3 class="course-name"><a href="course-details.html">Advance Web Development</a></h3>
+                            <div class="course-meta"><a href="course.html"><i class="fas fa-user-tie"></i><span
+                                        class="total-student">996 Students</span></a> <a href="course.html"><i
+                                        class="fa-solid fa-tv"></i><span class="course-hour">56 Leson</span></a> <a
+                                    href="course.html"><i class="fa-solid fa-clock"></i><span class="course-hour">4h
+                                        23m</span></a></div>
+                            <div class="course-price"><span class="price"><del>80K</del> 15K</span> <small
+                                    class="discount">60% Off</small></div>
+                            <div class="course-bottom">
+                                <div class="course-author"><a href="team-details.html" class="text-inherit"><img
+                                            src="{% static 'assets/img/about/author-3-6.png' %}" alt="About Author">By
+                                        Zeeshan Malim</a></div>
+                                <div class="course-review"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                                        class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <span class="review-avarage">( 5.0 )</span>
+                                </div>
+                            </div><a href="https://instagram.com/zeetech_academy" class="vs-btn style5"><i
+                                    class="fas fa-play"></i>Preview Course</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-12">
+                    <div class="course-style4">
+                        <div class="course-img"><a href="course-details.html"><img class="w-100"
+                                    src="{% static 'assets/img/course/course-3-4.jpg' %}" alt="Course Img"></a></div>
+                        <div class="course-content">
+                            <div class="course-category"><a href="course.html">Digital Marketing</a></div>
+                            <h3 class="course-name"><a href="course-details.html">biggening To Advance</a></h3>
+                            <div class="course-meta"><a href="course.html"><i class="fas fa-user-tie"></i><span
+                                        class="total-student">669 Students</span></a> <a href="course.html"><i
+                                        class="fa-solid fa-tv"></i><span class="course-hour">96 Leson</span></a> <a
+                                    href="course.html"><i class="fa-solid fa-clock"></i><span class="course-hour">5h
+                                        35m</span></a></div>
+                            <div class="course-price"><span class="price"><del>1 Lakh</del> 20K - 40K</span> <small
+                                    class="discount">50% Off</small></div>
+                            <div class="course-bottom">
+                                <div class="course-author"><a href="team-details.html" class="text-inherit"><img
+                                            src="{% static 'assets/img/about/author-3-6.png' %}" alt="About Author">By
+                                        Zeeshan Malim</a></div>
+                                <div class="course-review"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                                        class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <span class="review-avarage">( 5.0 )</span>
+                                </div>
+                            </div><a href="https://instagram.com/zeetech_academy" class="vs-btn style5"><i
+                                    class="fas fa-play"></i>Preview Course</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-12">
+                    <div class="course-style4">
+                        <div class="course-img"><a href="course-details.html"><img class="w-100"
+                                    src="{% static 'assets/img/course/course-3-5.jpg' %}" alt="Course Img"></a></div>
+                        <div class="course-content">
+                            <div class="course-category"><a href="course.html">Data Analytics</a></div>
+                            <h3 class="course-name"><a href="course-details.html">Datbase And Data WarHouse</a></h3>
+                            <div class="course-meta"><a href="course.html"><i class="fas fa-user-tie"></i><span
+                                        class="total-student">789 Students</span></a> <a href="course.html"><i
+                                        class="fa-solid fa-tv"></i><span class="course-hour">69 Leson</span></a> <a
+                                    href="course.html"><i class="fa-solid fa-clock"></i><span class="course-hour">5h
+                                        55m</span></a></div>
+                            <div class="course-price"><span class="price"><del>40K</del> 15K</span> <small
+                                    class="discount">50% Off</small></div>
+                            <div class="course-bottom">
+                                <div class="course-author"><a href="team-details.html" class="text-inherit"><img
+                                            src="{% static 'assets/img/about/author-3-6.png' %}" alt="About Author">By
+                                        Zeeshan Malim</a></div>
+                                <div class="course-review"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                                        class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <span class="review-avarage">( 5.0 )</span>
+                                </div>
+                            </div><a href="https://instagram.com/zeetech_academy" class="vs-btn style5"><i
+                                    class="fas fa-play"></i>Preview Course</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-12">
+                    <div class="course-style4">
+                        <div class="course-img"><a href="course-details.html"><img class="w-100"
+                                    src="{% static 'assets/img/course/course-3-6.jpg' %}" alt="Course Img"></a></div>
+                        <div class="course-content">
+                            <div class="course-category"><a href="course.html">Linux</a></div>
+                            <h3 class="course-name"><a href="course-details.html">Information packed practical training
+                                    starting</a></h3>
+                            <div class="course-meta"><a href="course.html"><i class="fas fa-user-tie"></i><span
+                                        class="total-student">204 Students</span></a> <a href="course.html"><i
+                                        class="fa-solid fa-tv"></i><span class="course-hour">12 Leson</span></a> <a
+                                    href="course.html"><i class="fa-solid fa-clock"></i><span class="course-hour">2h
+                                        11m</span></a></div>
+                            <div class="course-price"><span class="price"><del>40K</del> 15K</span> <small
+                                    class="discount">60% Off</small></div>
+                            <div class="course-bottom">
+                                <div class="course-author"><a href="team-details.html" class="text-inherit"><img
+                                            src="{% static 'assets/img/about/author-3-6.png' %}" alt="About Author">By
+                                        Zeeshan Malim</a></div>
+                                <div class="course-review"><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
+                                        class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <span class="review-avarage">( 5.0 )</span>
+                                </div>
+                            </div><a href="https://instagram.com/zeetech_academy" class="vs-btn style5"><i
+                                    class="fas fa-play"></i>Preview Course</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row vs-carousel wow fadeInUp slide-course-thumb" data-asnavfor=".slide-course-big"
+                data-wow-delay="0.4s" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3"
+                data-sm-slide-show="2" data-xs-slide-show="2" data-focuson-select="true">
+                <div class="col-auto">
+                    <div class="course-style5">
+                        <div class="course-img"><img class="w-100" src="{% static 'assets/img/course/course-3-1.png' %}"
+                                alt="image"></div>
+                        <div class="course-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="course-style5">
+                        <div class="course-img"><img class="w-100" src="{% static 'assets/img/course/course-3-2.png' %}"
+                                alt="image"></div>
+                        <div class="course-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="course-style5">
+                        <div class="course-img"><img class="w-100" src="{% static 'assets/img/course/course-3-3.png' %}"
+                                alt="image"></div>
+                        <div class="course-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="course-style5">
+                        <div class="course-img"><img class="w-100" src="{% static 'assets/img/course/course-3-4.png' %}"
+                                alt="image"></div>
+                        <div class="course-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="course-style5">
+                        <div class="course-img"><img class="w-100" src="{% static 'assets/img/course/course-3-5.png' %}"
+                                alt="image"></div>
+                        <div class="course-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="course-style5">
+                        <div class="course-img"><img class="w-100"
+                                src="{% static 'assets/img/course/course-3-5-1.jpg' %}" alt="image"></div>
+                        <div class="course-review"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="space-top space-extra-bottom">
+        <div class="shape-mockup jump d-none d-xxl-block" data-right="10%" data-bottom="12%">
+            <div class="shape-dotted"></div>
+        </div>
+        <div class="shape-mockup rotate d-none d-xxl-block" data-right="48%" data-top="17%">
+            <div class="vs-polygon1"></div>
+        </div>
+        <div class="shape-mockup jump-reverse d-none d-xxl-block" data-right="51%" data-top="21%">
+            <div class="vs-rounded1"></div>
+        </div>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-5 col-xxl-5">
+                    <div class="title-area wow fadeInUp" data-wow-delay="0.3s"><span class="sec-subtitle">WHAT PEOPLE
+                            SAY</span>
+                        <h2 class="sec-title h1">Hear Our Students Words</h2>
+                    </div>
+                    <div class="testi-slide1 wow fadeInUp row" data-wow-delay="0.4s">
+                        <div class="col-auto">
+                            <div class="media-style6">
+                                <div class="media-img"><img
+                                        src="{% static 'assets/img/testimonial/testimonial-3-1.png' %}" alt=""></div>
+                                <div class="media-content">
+                                    <h5 class="media-name">Marcella Moniq</h5>
+                                    <p class="media-degi">Web Technology</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="media-style6">
+                                <div class="media-img"><img
+                                        src="{% static 'assets/img/testimonial/testimonial-3-2.png' %}" alt=""></div>
+                                <div class="media-content">
+                                    <h5 class="media-name">Jessica Mmoniqa</h5>
+                                    <p class="media-degi">Art Professor</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="media-style6">
+                                <div class="media-img"><img
+                                        src="{% static 'assets/img/testimonial/testimonial-3-3.png' %}" alt=""></div>
+                                <div class="media-content">
+                                    <h5 class="media-name">Victor M. Walkar</h5>
+                                    <p class="media-degi">Academic English</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <div class="media-style6">
+                                <div class="media-img"><img
+                                        src="{% static 'assets/img/testimonial/testimonial-3-3.png' %}" alt=""></div>
+                                <div class="media-content">
+                                    <h5 class="media-name">William Smith</h5>
+                                    <p class="media-degi">Science Professor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-7 col-xxl-auto align-self-end">
+                    <div class="testi-style2">
+                        <div class="testi-shape1"></div>
+                        <div class="testi-slide2">
+                            <div>
+                                <div class="testi-content"><span class="testi-icon"><img
+                                            src="{% static 'assets/img/icon/quote.svg' %}"
+                                            alt="Testimonial Icon"></span>
+                                    <p class="testi-text">Lorem ipsum is placeholder text commonly used in the graphic,
+                                        print, and publishing industries for previewing layouts and visual mockups
+                                        adipiscing</p>
+                                    <h4 class="testi-name">Marcella Moniq</h4>
+                                    <p class="testi-degi">Web Technology</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="testi-content"><span class="testi-icon"><img
+                                            src="{% static 'assets/img/icon/quote.svg' %}"
+                                            alt="Testimonial Icon"></span>
+                                    <p class="testi-text">From its medieval origins to the digital era, learn everything
+                                        there is to know about the ubiquitous lorem ipsum passage known, is dummy text
+                                        used</p>
+                                    <h4 class="testi-name">Jessica Moniqa</h4>
+                                    <p class="testi-degi">Art Professor</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="testi-content"><span class="testi-icon"><img
+                                            src="{% static 'assets/img/icon/quote.svg' %}"
+                                            alt="Testimonial Icon"></span>
+                                    <p class="testi-text">Richard McClintock, a Latin scholar from Hampden-Sydney
+                                        College, is credited with discovering the source behind the ubiquitous filler
+                                        piqued by consectetur</p>
+                                    <h4 class="testi-name">Victor M. Walkar</h4>
+                                    <p class="testi-degi">Academic English</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="testi-content"><span class="testi-icon"><img
+                                            src="{% static 'assets/img/icon/quote.svg' %}"
+                                            alt="Testimonial Icon"></span>
+                                    <p class="testi-text">I had the opportunity to meet with the dynamic & distinguishe
+                                        faculties, who are highly qualified & friendly patients. With their assist &
+                                        guidance I…</p>
+                                    <h4 class="testi-name">William Smith</h4>
+                                    <p class="testi-degi">Science Professor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <section class="space-extra-bottom" id="blogs">
+        <div class="container">
+            <div class="title-area text-center">
+                <div class="sec-icon">
+                    <div class="vs-circle"></div>
+                </div><span class="sec-subtitle">BLOG AND UPDATES</span>
+                <h2 class="sec-title h1">News & Articles</h2>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                {% for i in posts %}
+                <div class="col">
+
+                    {{ i.link|safe }}
+                </div>
+                {% endfor %}
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <footer class="footer-wrapper footer-layout3">
+        <div class="shape-mockup jump d-none d-xl-block" data-left="-270px" data-bottom="-60px">
+            <div class="vs-border-circle"></div>
+        </div>
+        <div class="widget-area">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-4 text-center text-lg-start">
+                        <div class="widget footer-widget">
+                            <div class="footer-logo mx-auto mx-lg-0"><a href="index.html"><img
+                                        src="{% static 'assets/img/logo.png' %}" alt="logo"></a></div>
+                            <div class="map-style1"><img src="{% static 'assets/img/shape/world-dot-map-gray-1.png' %}"
+                                    alt=""></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="widget footer-widget">
+                            <h3 class="widget_title">About Academic</h3>
+                            <div class="vs-widget-about">
+                                <p class="footer-text">03, Sagar Apt, Near Silver Fork, Almas Colony, Kausa -
+                                    Mumbra,Thane: 400612</p>
+                                <p class="footer-info"><i class="fa-solid fa-phone-alt"></i><a class="text-inherit"
+                                        href="tel:919987651839">+91 9987651839</a></p>
+                                <p class="footer-info"><i class="fa-solid fa-envelope"></i><a class="text-inherit"
+                                        href="mailto:malimzeeshaan@gmail.com">malimzeeshaan@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="widget footer-widget">
+                            <h4 class="widget_title">Subscribe Newsletter</h4>
+                            <p class="mailchimp-text">Subscribe to our newsletter. Get academic updates to news and
+                                events.</p>
+                            <form class="newsletter-form"><input class="form-control" type="email"
+                                    placeholder="Enter your email" required=""> <button type="submit"
+                                    class="vs-btn">Subscribe</button></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-wrap">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="text-center col-lg-auto">
+                        <p class="copyright-text">Copyright <i class="fa-solid fa-copyright"></i> 2023 <a
+                                href="/">ZeeTech</a>. All Rights Reserved By <a href="https://kztech.in">KZ
+                                Tech</a></p>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <div class="social-style1"><a href="#"><i class="fab fa-facebook-f"></i>Facebook</a> <a
+                                href="#"><i class="fab fa-twitter"></i>Twitter</a> <a href="#"><i
+                                    class="fab fa-linkedin-in"></i>Linked In</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer><a href="#" class="scrollToTop scroll-btn"><i class="fa-solid fa-arrow-up"></i></a>
+    <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/app.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>
